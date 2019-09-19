@@ -730,7 +730,7 @@
         }
       },
 
-      'toggleMenu ', () {
+      toggleMenu() {
         if (!this.selectDisabled) {
           console.log('toggleMenu menuVisibleOnFocus:', this.menuVisibleOnFocus, ' visible:', this.visible);
           if (this.menuVisibleOnFocus) {
