@@ -730,8 +730,9 @@
         }
       },
 
-      toggleMenu() {
+      'toggleMenu ', () {
         if (!this.selectDisabled) {
+          console.log('toggleMenu menuVisibleOnFocus:', this.menuVisibleOnFocus, ' visible:', this.visible);
           if (this.menuVisibleOnFocus) {
             this.menuVisibleOnFocus = false;
           } else {
@@ -739,6 +740,8 @@
           }
           if (this.visible) {
             (this.$refs.input || this.$refs.reference).focus();
+          } else {
+            this.visible = !this.visible;
           }
         }
       },
