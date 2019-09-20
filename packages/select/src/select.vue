@@ -731,6 +731,8 @@
       },
 
       toggleMenu() {
+        console.log('toggleMenu menuVisibleOnFocus:', this.menuVisibleOnFocus, ' visible:', this.visible);
+        alert('el-select toggleMenu');
         if (!this.selectDisabled) {
           console.log('toggleMenu menuVisibleOnFocus:', this.menuVisibleOnFocus, ' visible:', this.visible);
           if (this.menuVisibleOnFocus) {
@@ -862,6 +864,8 @@
     },
 
     mounted() {
+      console.log('el-select mounted');
+      alert('el-select mounted');
       if (this.multiple && Array.isArray(this.value) && this.value.length > 0) {
         this.currentPlaceholder = '';
       }
